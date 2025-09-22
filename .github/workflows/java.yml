@@ -28,7 +28,9 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle
-      
+            
+      - name: Show HOME
+        run: echo $HOME
  
       - name: Build with Gradle
         run: ./gradlew build
